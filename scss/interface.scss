@@ -1,0 +1,141 @@
+$white: #fff;
+$black: #000;
+$grey: #555;
+$dark-grey: #1d1d1b;
+$medium-grey: #888;
+$medium-grey-hover: #757575;
+$light-grey: #ccc;
+$blue: #0089d8;
+$blue-hover: #0076ba;
+$green: #4e763b;
+$green-hover: #436533;
+$red: #ac124a;
+$red-hover: #940f40;
+$solid-background: #103045;
+$bg-dark-blue: #103045;
+$bg-green: #5a786f;
+$bg-grey:  #7a7a7a;
+
+$primary-color: $white;
+$secondary-color: $black;
+
+
+// Interface Settings
+
+.desktop {
+    &[data-background=mountains] {
+        background-image: url(../wallpapers/mountains.jpg);
+    }
+    &[data-background=city] {
+        background-image: url(../wallpapers/city.jpg);
+    }
+    &[data-background=beach] {
+        background-image: url(../wallpapers/beach.jpg);
+    }
+    &[data-background=forest] {
+        background-image: url(../wallpapers/forest.jpg);
+    }
+    &[data-background=sky] {
+        background-image: url(../wallpapers/sky.jpg);
+    }
+    &[data-background=dark-blue] {
+        background-image: none;
+        background-color: $bg-dark-blue;
+    }
+    &[data-background=green] {
+        background-image: none;
+        background-color: $bg-green;
+    }
+    &[data-background=grey] {
+        background-image: none;
+        background-color: $bg-grey;
+    }
+    &[data-icons=medium] {
+        .desktopIcons .icon {
+            height: 110px;
+            margin: 12px 10px 9px;
+        }
+    }
+    &[data-icons=small] {
+        .desktopIcons .icon {
+            height: 100px;
+            margin: 12px 10px 6px;
+        }
+    }
+    &[data-windows=square] {
+        .window,
+        .menu .menu-box,
+        .app-menu,
+        .side-menu,
+        .widgets .widget-box,
+        .fullScreenPreview {
+            border-radius: 0;
+        }
+        .window__head {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+        .window__body {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+    &[data-windows=round] {
+        .window,
+        .menu .menu-box,
+        .app-menu,
+        .side-menu,
+        .widgets .widget-box,
+        .fullScreenPreview {
+            border-radius: 10px;
+        }
+        .window__head {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .window__body {
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+    &[data-glassmorphism=off] {
+        .app-menu,
+        .side-menu, 
+        .menu .menu-box {
+            background-color: rgba(#ddd, 0.9);
+            backdrop-filter: blur(0);
+        }
+        .widgets .widget-box {
+            background-color: rgba(#ddd, 0.7);
+            backdrop-filter: blur(0);
+            &.transparent {
+                background-color: transparent;
+            }
+        }
+        .window__head {
+            background-color: rgba(#ddd, 0.8);
+            backdrop-filter: blur(0);
+        }
+        .window__body {
+            &.transparent {
+                background-color: rgba(#ddd, 0.9);
+                backdrop-filter: blur(0);
+            }
+        }
+    }
+    &[data-theme=theme-green] {
+        .menu .menu-box__menu-item.active {
+            border-color: $green;
+        }
+    }
+    &[data-theme=theme-red] {
+        .menu .menu-box__menu-item.active {
+            border-color: $red;
+        }
+    }
+    &[data-theme=theme-grey] {
+        .menu .menu-box__menu-item.active {
+            border-color: $medium-grey;
+        }
+    }
+}

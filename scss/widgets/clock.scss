@@ -1,0 +1,96 @@
+.widget-box.clock {
+  .clock-dash {
+    border-radius: 100%;
+    background: $white;
+    border: 5px solid $black;
+    box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.4), 2px 3px 8px 0 rgba(0, 0, 0, 0.4);
+  }
+  .wrap {
+    overflow: hidden;
+    position: relative;
+    width: 175px;
+    height: 175px;
+    border-radius: 100%;
+  }
+  .minute,
+  .hour {
+    position: absolute;
+    height: 50px;
+    width: 3px;
+    margin: auto;
+    top: -29%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: black;
+    transform-origin: bottom center;
+    transform: rotate(0deg);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  .minute {
+    position: absolute;
+    height: 65px;
+    width: 2px;
+    top: -37%;
+    left: 0;
+    transform: rotate(90deg);
+  }
+  .second {
+    position: absolute;
+    height: 65px;
+    width: 2px;
+    margin: auto;
+    top: -37%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 2px;
+    background: $blue;
+    transform-origin: bottom center;
+    transform: rotate(180deg);
+    z-index: 1;
+  }
+  .dot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50px;
+    background: $white;
+    border: 2px solid $blue;
+    border-radius: 50px;
+    margin: auto;
+    z-index: 1;
+  }
+}
+
+.desktop {
+    &[data-theme=theme-green] {
+        .widget-box.clock .second {
+          background-color: $green;
+        }
+        .widget-box.clock .dot {
+          border-color: $green;
+        }
+    }
+    &[data-theme=theme-red] {
+      .widget-box.clock .second {
+          background-color: $red;
+        }
+        .widget-box.clock .dot {
+          border-color: $red;
+        }
+    }
+    &[data-theme=theme-grey] {
+      .widget-box.clock .second {
+        background-color: $medium-grey;
+      }
+      .widget-box.clock .dot {
+        border-color: $medium-grey;
+      }
+    }
+}

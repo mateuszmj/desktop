@@ -1,0 +1,76 @@
+.desktop {
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100vh;
+    background-color: $solid-background;
+    background-size: cover;
+    letter-spacing: 0.2px;
+    .renderApps {
+        z-index: 100;
+    }
+    .fullScreenPreview, .leftSidePreview, .rightSidePreview {
+        display: none;
+        position: absolute;
+        background-color: rgba($white, 0.15);
+        margin: 10px;
+        border: 1px solid rgba($white, 0.5);
+        border-radius: 6px;
+        z-index: 1000;
+        &.active {
+            display: block;
+        }
+    }
+    .fullScreenPreview {
+        top: 0px;
+        left: 0px;
+        width: calc(100% - 20px);
+        height: calc(100% - 90px);
+    }
+    .leftSidePreview {
+        top: 0px;
+        left: 0px;
+        width: calc(50% - 20px);
+        height: calc(100% - 90px);
+    }
+    .rightSidePreview {
+        top: 0px;
+        right: 0px;
+        width: calc(50% - 20px);
+        height: calc(100% - 90px);
+    }
+}
+
+.desktopIcons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-start;
+    height: calc(100vh - 80px);
+    width: calc(100vw - 360px);
+    padding: 10px;
+    .icon {
+        cursor: pointer;
+        margin: 12px 10px;
+        height: 120px;
+        width: 100px;
+        &__img {
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            height: calc(100% - 52px);
+        }
+        &__name {
+            cursor: pointer;
+            display: block;
+            margin-top: 12px;
+            color: $white;
+            text-shadow: 2px 2px $black;
+            font-size: 14px;
+            line-height: 14px;
+            line-height: 20px;
+            text-align: center;
+        }
+    }
+}

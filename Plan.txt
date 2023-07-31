@@ -1,0 +1,14 @@
+TO DO
+
+Interface
+   Scalable windows
+
+Apps
+   Space defender
+   Music player
+
+
+Widgets
+   Calendar
+   Stocks
+   Weather

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.min.css" />
+    <script type="module" src="js/main.js" defer></script>
+    <title>Desktop Playground</title>
+  </head>
+  <body>
+    <main class="desktop">
+      <!-- ICONS -->
+      <section class="desktopIcons"></section>
+
+      <!-- WIDGETS -->
+      <section class="widgets"></section>
+
+      <!-- MENU BAR -->
+      <section class="menu">
+        <div class="menu-box">
+          <div class="menu-box__menu-item" data-action-menu="app-menu">
+            <i class="menu-bar-icon svg-icon svg-icon--app-menu" data-open-menu></i>
+          </div>
+          <div class="menu-box__menu-separator"></div>
+          <div class="menu-box__menu-apps"></div>
+          <div class="menu-box__menu-separator"></div>
+          <div class="menu-box__menu-item interface-icon" data-action-app="settings" data-pinned-app="true">
+            <i class="menu-bar-icon svg-icon svg-icon--settings"></i>
+          </div>
+          <div class="menu-box__menu-item interface-icon" data-action-special="fullScreen">
+            <i class="menu-bar-icon svg-icon svg-icon--fullScreen"></i>
+          </div>
+        </div>
+        <div class="menu-side-wrapper">
+          <div class="menu-box">
+            <div class="menu-box__menu-item small interface-icon" data-action-menu="volume" data-open-menu>
+              <i class="menu-bar-icon svg-icon svg-icon--volume"></i>
+            </div>
+            <div class="menu-box__menu-item small interface-icon" data-action-menu="connection" data-open-menu>
+              <i class="menu-bar-icon svg-icon svg-icon--connection"></i>
+            </div>
+            <div class="menu-box__menu-item small interface-icon" data-action-menu="battery" data-open-menu>
+              <i class="menu-bar-icon svg-icon svg-icon--battery"></i>
+            </div>
+          </div>
+          <div class="menu-box menu-box time" data-action-app="calendar">
+            <span class="menu-box__time"></span>
+            <span class="menu-box__time date"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- APP MENU -->
+      <section class="app-menu" data-app-name="app-menu" data-open-menu>
+        <h3 class="app-menu__header">Applications</h3>
+        <div class="app-menu__icons menuApps"></div>
+        <h3 class="app-menu__header">Games & entertainment</h3>
+        <div class="app-menu__icons menuGames"></div>
+      </section>
+
+      <!-- SIDE MENUS -->
+      <section class="side-menu" data-app-name="volume" data-open-menu>
+        <span class="side-menu__header">Volume</span>
+        <div class="side-menu__body">
+          <input type="range" class="volume-control">
+          <span class="volume-value">50</span>
+        </div>
+      </section>
+
+      <section class="side-menu" data-app-name="connection" data-open-menu>
+        <span class="side-menu__header">Internet connection</span>
+        <div class="side-menu__body"><span></span><i class="svg-icon svg-icon--connection"></i></div>
+      </section>
+
+      <section class="side-menu" data-app-name="battery" data-open-menu>
+        <span class="side-menu__header">Battery</span>
+        <div class="side-menu__body"><span></span><i class="svg-icon svg-icon--batteryLow"></i></div>
+      </section>
+
+      <!-- APPS -->
+      <section class="renderApps"></section>
+      <div class="fullScreenPreview"></div>
+      <div class="leftSidePreview"></div>
+      <div class="rightSidePreview"></div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+.widgets {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    height: calc(100vh - 80px);
+    width: 360px;
+    padding: 20px;
+    .widget-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        padding: 10px;
+        min-height: 160px;
+        border-radius: 6px;
+        background-color: rgba($primary-color, 0.3);
+        backdrop-filter: blur(5px);
+        &, * {
+            cursor: pointer;
+        }
+        &.none {
+            visibility: hidden;
+        }
+        &.transparent {
+            background-color: transparent;
+            backdrop-filter: none;
+        }
+    }
+}
